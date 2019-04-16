@@ -7,7 +7,6 @@ package be;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 
@@ -17,7 +16,7 @@ import javafx.beans.property.StringProperty;
  */
 public class Student extends User{
 
-        private final List<LocalDate> presence;
+        private final List<Status> presence;
         private IntegerProperty courseId;
         
 
@@ -28,11 +27,11 @@ public class Student extends User{
         }
         
         
-        public List<LocalDate> getStatus(){
+        public List<Status> getStatus(){
             return this.presence;
         }
-        
-        public void addStatus(LocalDate status){
+
+        public void addStatus(Status status){
             this.presence.add(status);
         }
 

@@ -7,7 +7,6 @@ package be;
 
 import java.util.HashMap;
 import java.util.List;
-import java.time.LocalDate;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 
@@ -19,7 +18,7 @@ public class Course {
     
     public final IntegerProperty id;
     public final StringProperty name;
-    public HashMap<IntegerProperty, List<LocalDate>> presence;
+    public HashMap<IntegerProperty, List<Status>> presence;
     
     
     public Course(IntegerProperty id, StringProperty name){
@@ -36,7 +35,7 @@ public class Course {
         return name;
     }
     
-    public void addPresence(IntegerProperty id, List<LocalDate> status){
+    public void addPresence(IntegerProperty id, List<Status> status){
         this.presence.put(id, status);
     }
     

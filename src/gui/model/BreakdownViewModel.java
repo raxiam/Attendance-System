@@ -5,6 +5,7 @@
  */
 package gui.model;
 
+import be.Status;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import javafx.collections.FXCollections;
