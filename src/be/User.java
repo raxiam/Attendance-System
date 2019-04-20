@@ -18,6 +18,7 @@ public class User{
         STUDENT,
         TEACHER
     }
+
     private IntegerProperty id;
     private StringProperty name;
     private final UserType type;
@@ -39,14 +40,14 @@ public class User{
     }
         
     public IntegerProperty getId(){
-        return id;
+        return this.id;
     }
         
     public StringProperty getName(){
-        return name;
+        return this.name;
     }
     
     public UserType getType(){
-        return type;
+        return this.type;
     }
 }

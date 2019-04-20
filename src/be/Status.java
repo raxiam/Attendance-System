@@ -23,28 +23,35 @@ public class Status{
     private final Boolean wasPresent;
 
 
-    public Status(LocalDate date, LocalTime time, Boolean wasPresent){
-        this.date = date;
+    public Status(Boolean wasPresent, LocalDate date){
+    	this.wasPresent = wasPresent;
+	this.date = date;
+	this.day = date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+	this.time = null;
+    }
+    
+    public Status(Boolean wasPresent, LocalDate date, LocalTime time){
+        this.wasPresent = wasPresent;
+	this.date = date;
         this.day = date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
         this.time = time;
-        this.wasPresent = wasPresent;
     }
 
 
     public LocalDate getDate(){
-        return date;
+        return this.date;
     }
 
     public String getDay(){
-        return day;
+        return this.day;
     }
 
     public LocalTime getTime(){
-        return time;
+        return this.time;
     }
 
     public Boolean getPresence(){
-        return wasPresent;
+        return this.wasPresent;
     }
 
 }
