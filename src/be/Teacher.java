@@ -19,7 +19,7 @@ public class Teacher extends User{
     public List<Course> courses;
     
     
-    public Teacher(IntegerProperty id, StringProperty name){
+    public Teacher(Integer id, String name){
         super(id, name, UserType.TEACHER);
         courses = new ArrayList();
     }

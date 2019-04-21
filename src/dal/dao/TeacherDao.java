@@ -5,10 +5,13 @@
  */
 package dal.dao;
 
+import be.Teacher;
 /**
  *
  * @author root
  */
 public class TeacherDao {
-    
+    public Teacher createTeacher(Integer id, String name){
+        return new Teacher(id, name);
+    }
 }

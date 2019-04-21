@@ -5,9 +5,7 @@
  */
 package bll;
 
-import be.Student;
-import be.Course;
-import be.Teacher;
+import be.*;
 
 /**
  *

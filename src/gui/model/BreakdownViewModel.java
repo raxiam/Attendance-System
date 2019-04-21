@@ -35,11 +35,14 @@ public class BreakdownViewModel {
         //hard data
         for(int i = 0; i < 15; i++){
         
-        LocalDate d1 = LocalDate.now();
-        LocalTime t1 = LocalTime.now();
-        Status s = new Status(d1, t1, true);
+            LocalDate d1 = LocalDate.now();
+            LocalTime t1 = LocalTime.now();
+            Status s = new Status(true, d1, t1 );
+
+            Status ss = new Status(false, d1, t1);
         
-        statusList.add(s);
+            statusList.add(s);
+            statusList.add(ss);
         }
         return statusList;
     }

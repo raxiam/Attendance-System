@@ -5,9 +5,11 @@
  */
 package dal;
 
-import be.Course;
-import be.Student;
-import be.Teacher;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import be.*;
 
 /**
  *
@@ -15,39 +17,22 @@ import be.Teacher;
  */
 public interface IDALFacade {
     
-    //Status
-    public Status createStatus();
-    
-    public Status getStatus();
-    
-    public Status updateStatus();
-    
-    public void deleteStatus();
-    
-    //Student
-    public Student createStudent();
-    
-    public Student getStudent();
-    
-    public Student updateStudent();
-    
-    public void deleteStudent();
-    
-    //Teacher
-    public Teacher createTeacher();
-    
-    public Teacher getTeacher();
-    
-    public Teacher updateTeacher();
-    
-    public void deleteTeacher();
-    
-    //Course
-    public Course createCourse();
-    
-    public Course getCourse();
-    
-    public Course updateCourse();
-    
-    public void deleteCourse();
+    Student getStudent(int id);
+
+    List<Student> getAllStudent(int courseId);
+
+    Course getCourse(int courseId);
+
+    List<User> getAllUser();
+
+    User getUser(int id);
+
+    Course createCourse(Integer id, String name, LocalDate start, LocalDate end, DayOfWeek[] weekDays);
+
+    Student createStudent(int id, String name, int courseId, ArrayList<Status> presence);
+
+    Teacher createTeacher(int id, String name);
+
+    void updateStudent(List<Status> presence);
+
 }

@@ -19,31 +19,31 @@ public class User{
         TEACHER
     }
 
-    private IntegerProperty id;
-    private StringProperty name;
+    private Integer id;
+    private String name;
     private final UserType type;
         
         
-    public User(IntegerProperty id, StringProperty name, UserType type){
+    public User(Integer id, String name, UserType type){
         this.id = id;
         this.name = name;
         this.type = type;
     }
         
         
-    public void setId(IntegerProperty id){
+    public void setId(Integer id){
         this.id = id;
     }
         
-    public void setName(StringProperty name){
+    public void setName(String name){
         this.name = name;
     }
         
-    public IntegerProperty getId(){
+    public Integer getId(){
         return this.id;
     }
         
-    public StringProperty getName(){
+    public String getName(){
         return this.name;
     }
     

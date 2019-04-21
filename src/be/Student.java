@@ -7,8 +7,6 @@ package be;
 
 import java.util.ArrayList;
 import java.util.List;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -17,12 +15,12 @@ import javafx.beans.property.StringProperty;
 public class Student extends User{
 
         private final List<Status> presence;
-        private IntegerProperty courseId;
+        private Integer courseId;
         
 
-        public Student(IntegerProperty id, StringProperty name, IntegerProperty courseId){
+        public Student(Integer id, String name, Integer courseId, ArrayList<Status> presence){
             super(id, name, UserType.STUDENT);
-            this.presence = new ArrayList();
+            this.presence = presence;
             this.courseId = courseId;
         }
         

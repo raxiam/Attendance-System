@@ -24,15 +24,15 @@ public class Status{
 
 
     public Status(Boolean wasPresent, LocalDate date){
-    	this.wasPresent = wasPresent;
-	this.date = date;
-	this.day = date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
-	this.time = null;
+        this.wasPresent = wasPresent;
+	    this.date = date;
+	    this.day = date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+	    this.time = null;
     }
     
     public Status(Boolean wasPresent, LocalDate date, LocalTime time){
         this.wasPresent = wasPresent;
-	this.date = date;
+	    this.date = date;
         this.day = date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
         this.time = time;
     }
@@ -50,8 +50,8 @@ public class Status{
         return this.time;
     }
 
-    public Boolean getPresence(){
-        return this.wasPresent;
+    public String getWasPresent(){
+        return wasPresent ? "Present" : "Absent";
     }
 
 }

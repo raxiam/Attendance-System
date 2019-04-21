@@ -5,10 +5,17 @@
  */
 package dal.dao;
 
+import be.Course;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
 /**
  *
  * @author root
  */
 public class CourseDao {
-    
+
+    public Course createCourse(int id, String name, LocalDate start, LocalDate end, DayOfWeek[] weekDays){
+        return new Course(id, name, start, end, weekDays);
+    }
 }

@@ -57,7 +57,7 @@ public class BreakdownViewController implements Initializable {
     public void loadData(){
         colDate.setCellValueFactory(new PropertyValueFactory("date"));
         colDay.setCellValueFactory(new PropertyValueFactory("day"));
-        colStatus.setCellValueFactory(new PropertyValueFactory("status"));
+        colStatus.setCellValueFactory(new PropertyValueFactory("wasPresent"));
         colTime.setCellValueFactory(new PropertyValueFactory("time"));
         tblBreakdown.setItems(breakdownModel.getStatusList());
     }
