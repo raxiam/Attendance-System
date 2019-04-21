@@ -9,6 +9,12 @@ import java.sql.*;
 public class UserDao {
 
     public List<User> getAllUser(){
-        ArrayList<User> Users;
+        List<User> users = new ArrayList<>();
+
+        while(rs.next()){
+            //take shit and fill list
+            //users.add();
+        }
+        return users;
     }
 }
